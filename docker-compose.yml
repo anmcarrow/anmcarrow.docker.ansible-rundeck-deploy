@@ -1,0 +1,15 @@
+version: '3'
+services:
+  mariadb:
+    container_name: rundeck
+    image: "anmcarrow/ansible-rundeck:latest"
+#    volumes: "/opt/rundeck:/var/lib/rundeck"
+    environment:
+      RDECK_ADMIN_PASS=admin
+#      RDECK_HOST=rundeck.example.net      
+      RDECK_PORT=4440
+      RDECK_VERSION=3.0.1-20180803
+    ports:
+      - "4440:4440"
+#    hostname: rundeck.example.net
+
